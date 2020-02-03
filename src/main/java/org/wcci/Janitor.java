@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+package org.wcci;
 
-public class Janitor {
+public class Janitor extends Employee {
+    public Janitor(String name, int empId, int salary) {
+        super(name, empId, salary);
+    }
 }
