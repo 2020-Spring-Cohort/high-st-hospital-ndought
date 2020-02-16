@@ -1,3 +1,40 @@
+package org.wcci;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class EmployeeTest {
+
+    @Test
+    void getName() {
+    }
+
+    @Test
+    void setName() {
+    }
+
+    @Test
+    void getEmpId() {
+    }
+
+    @Test
+    void setEmpId() {
+    }
+
+    @Test
+    void getSalary() {
+    }
+
+    @Test
+    void setSalary() {
+    }
+
+    @Test
+    void testToString() {
+    }
+}
+
 //package org.wcci;
 //
 //import org.junit.jupiter.api.Test;
@@ -47,5 +84,4 @@
 //        testDoc.drawBlood(testPatient);
 //        assertEquals(15, testPatient.getBloodLevel());
 
-    }
-
+//    }
