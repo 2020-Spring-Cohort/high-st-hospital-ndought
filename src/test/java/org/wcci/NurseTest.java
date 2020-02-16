@@ -11,11 +11,11 @@ class NurseTest extends Employee {
     }
 
     @Test
-    void getSpecialty() {
+    void getPatientLoad() {
     }
 
     @Test
-    void setSpecialty() {
+    void setPatientLoad() {
     }
 
     @Test
