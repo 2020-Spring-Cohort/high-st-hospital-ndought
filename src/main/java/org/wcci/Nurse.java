@@ -16,11 +16,22 @@ public class Nurse extends Employee {
         super(name, empId, salary);
         this.patientLoad = patientLoad;
     }
-
     public void drawBlood(Patient patient) {
         patient.haveBloodDrawn(-5);
     }
+
+
+    @Override
+    public String toString() {
+        return "Nurse{" +
+                "patientLoad=" + patientLoad +
+                '}';
+    }
+
 }
+
+
+
 
 
 

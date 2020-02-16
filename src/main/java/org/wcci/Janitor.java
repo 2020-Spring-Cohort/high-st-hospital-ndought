@@ -16,4 +16,13 @@ public class Janitor extends Employee {
         super(name, empId, salary);
         this.isSweeping = true;
     }
+
+    @Override
+    public String toString() {
+        return "Janitor{" +
+                "isSweeping=" + isSweeping +
+                '}';
+    }
 }
+
+

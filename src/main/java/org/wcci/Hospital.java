@@ -10,6 +10,12 @@ public class Hospital {
         employeeMap.put(emp.getName(), emp);
     }
 
+    private HashMap<String, Patient> patientMap = new HashMap<>();
+
+    public void addPatient(Patient pat) {
+        patientMap.put(pat.getName(), pat);
+    }
+
     public void payAllEmployees(){
         for(Employee emp: employeeMap.values()){
             emp.setPaid(true);

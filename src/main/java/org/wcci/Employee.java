@@ -44,6 +44,10 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
+    public void setPaid(boolean b) {
+        return;
+    }
 }
 
 

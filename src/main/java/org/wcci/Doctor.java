@@ -22,6 +22,13 @@ public class Doctor extends Employee {
         testPatient.haveBloodDrawn(-5);
 
     }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "specialty='" + specialty + '\'' +
+                '}';
+    }
 }
 
 

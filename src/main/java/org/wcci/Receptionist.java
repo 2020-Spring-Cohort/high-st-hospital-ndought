@@ -17,7 +17,17 @@ public class Receptionist extends Employee {
         this.isOnPhone = isOnPhone;
         this.isOnPhone = true;
     }
+
+    @Override
+    public String toString() {
+        return "Receptionist{" +
+                "isOnPhone=" + isOnPhone +
+                '}';
+    }
 }
+
+
+
 
 
 
