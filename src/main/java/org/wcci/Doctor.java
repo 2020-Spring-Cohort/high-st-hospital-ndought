@@ -4,9 +4,9 @@ public class Doctor extends Employee {
 
     private String specialty;
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public String getSpecialty() {
+        return specialty;
+
     }
 
     public void setSpecialty(String specialty) {
