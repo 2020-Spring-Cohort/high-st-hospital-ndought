@@ -2,19 +2,19 @@ package org.wcci;
 
 public class Nurse extends Employee {
 
-    private String specialty;
+    private int patientLoad;
 
-    public String getSpecialty() {
-        return specialty;
+    public int getPatientLoad() {
+        return patientLoad;
     }
 
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
+    public void setPatientLoad(int patientLoad) {
+        this.patientLoad = patientLoad;
     }
 
-    public Nurse(String name, int empId, int salary, String specialty) {
+    public Nurse(String name, int empId, int salary, int patientLoad) {
         super(name, empId, salary);
-        this.specialty = specialty;
+        this.patientLoad = patientLoad;
     }
 
     public void drawBlood(Patient patient) {
