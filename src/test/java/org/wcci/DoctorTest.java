@@ -20,12 +20,17 @@ class DoctorTest {
     @Test
     public void doctorsCanDrawBlood() {
         underTest.drawBlood(testPatient);
-        assertEquals(15, testPatient.getBloodLevel());
+        assertEquals(18, testPatient.getBloodLevel());
     }
     @Test
     public void doctorShouldHaveASalaryOf90k() {
-        underTest.setSalary(90000);
+        underTest.setSalary(0);
         assertEquals(90000, underTest.getSalary());
+    }
+    @Test
+    public void doctorsShouldHaveASpecialty() {
+        underTest.setSpecialty("");
+        assertEquals("Heart", underTest.getSpecialty());
     }
 }
 
