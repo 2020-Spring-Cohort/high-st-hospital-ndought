@@ -10,7 +10,7 @@ public class Doctor extends Employee {
     public void setSpecialty(String specialty) {
         this.specialty = specialty;
     }
-    public Doctor(String name, int empId, int salary, String specialty) {
+    public Doctor(String name, int empId, int salary) {
         super(name, empId, salary);
     }
     public void drawBlood(Patient testPatient) {
