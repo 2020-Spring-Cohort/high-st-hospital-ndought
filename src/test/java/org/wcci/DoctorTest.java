@@ -24,12 +24,12 @@ class DoctorTest {
     }
     @Test
     public void doctorShouldHaveASalaryOf90k() {
-        underTest.setSalary(0);
+        underTest.getSalary();
         assertEquals(90000, underTest.getSalary());
     }
     @Test
     public void doctorsShouldHaveASpecialty() {
-        underTest.setSpecialty("");
+        underTest.getSpecialty();
         assertEquals("Heart", underTest.getSpecialty());
     }
 }
