@@ -8,7 +8,9 @@ public class PatientTwo extends Patient {
     public PatientTwo(String name, int bloodLevel, String illness) {
         super(name, bloodLevel);
     }
-
+    public int getBloodLevel() {
+        return super.getBloodLevel();
+    }
 
     public String getIllness() {
         return illness;

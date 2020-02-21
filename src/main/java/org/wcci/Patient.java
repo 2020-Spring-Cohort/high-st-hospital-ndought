@@ -14,10 +14,6 @@ public class Patient {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getBloodLevel() {
         return bloodLevel;
     }
@@ -25,9 +21,6 @@ public class Patient {
     public void haveBloodDrawn(int amount){
         bloodLevel -= amount;
     }
-
-
-
 
     @Override
     public String toString() {

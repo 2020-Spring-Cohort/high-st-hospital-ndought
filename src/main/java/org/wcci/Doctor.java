@@ -11,7 +11,7 @@ public class Doctor extends Employee {
         super(name, empId, salary);
         this.specialty = specialty;
     }
-    public void drawBlood(Patient testPatient) {
+    public void drawBlood(PatientOne testPatient) {
         testPatient.haveBloodDrawn(2);
     }
     @Override

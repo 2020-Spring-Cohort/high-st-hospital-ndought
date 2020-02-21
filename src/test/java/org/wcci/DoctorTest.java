@@ -8,13 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class DoctorTest {
 
     Doctor underTest;
-    Patient testPatient;
+    PatientOne testPatient;
 
 
     @BeforeEach
     public void setup() {
         underTest = new Doctor("Ralph", 5, 90000, "Heart");
-        testPatient = new Patient("billy", 20);
+        testPatient = new PatientOne("billy", 20, "lung cancer");
     }
 
     @Test

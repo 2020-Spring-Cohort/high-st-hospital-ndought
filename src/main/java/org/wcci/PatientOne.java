@@ -9,6 +9,11 @@ public class PatientOne extends Patient {
 
     }
 
+    @Override
+    public int getBloodLevel() {
+        return super.getBloodLevel();
+    }
+
     public String getIllness() {
         return illness;
     }
