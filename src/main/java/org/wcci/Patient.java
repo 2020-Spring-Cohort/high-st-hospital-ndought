@@ -4,10 +4,12 @@ public class Patient {
 
     private String name;
     private int bloodLevel;
+    private int healthLevel;
 
-    public Patient(String name, int bloodLevel) {
+    public Patient(String name, int bloodLevel, int healthLevel) {
         this.name = name;
-        this.bloodLevel = 20;
+        this.bloodLevel = bloodLevel;
+        this.healthLevel = healthLevel;
     }
 
     public String getName() {
@@ -18,7 +20,11 @@ public class Patient {
         return bloodLevel;
     }
 
-    public void haveBloodDrawn(int amount){
+    public int getHealthLevel() {
+        return healthLevel;
+    }
+
+    public void haveBloodDrawn(int amount) {
         bloodLevel -= amount;
     }
 
@@ -27,9 +33,9 @@ public class Patient {
         return "Patient{" +
                 "name='" + name + '\'' +
                 ", bloodLevel=" + bloodLevel +
+                ", healthLevel=" + healthLevel +
                 '}';
     }
-
 
 }
 

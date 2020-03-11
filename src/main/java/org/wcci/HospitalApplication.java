@@ -8,18 +8,18 @@ public class HospitalApplication {
 
     public static void main(String[] args) {
 
-        Doctor e1 = new Doctor("Vino", 007, 90000, "Heart");
-        e1.setName("Vino");
-        Nurse e2 = new Nurse("Amanda", 002, 50000, 2);
-        e2.setName("Amanda");
-        Receptionist e3 = new Receptionist("Miley", 003, 45000, true);
-        e3.setName("Miley");
-        Janitor e4 = new Janitor("Noah", 004, 40000, true);
-        e4.setName("Noah");
-        PatientOne p1 = new PatientOne("Bob", 20, "Heart Disease");
-        p1.setName("Bob");
-        PatientTwo p2 = new PatientTwo("Sally", 17, "Blood Clot");
-        p2.setName("Sally");
+        Doctor e1 = new Doctor("Vino", 007, 90000, true, "Heart");
+        e1.getName();
+        Nurse e2 = new Nurse("Amanda", 002, 50000,  true, 1);
+        e2.getName();
+        Receptionist e3 = new Receptionist("Miley", 003, 45000, false, true);
+        e3.getName();
+        Janitor e4 = new Janitor("Noah", 004, 40000, false, false);
+        e4.getName();
+        Patient p1 = new Patient("Bob", 20, 10);
+        p1.getName();
+        Patient p2 = new Patient("Sally", 17, 10);
+        p2.getName();
 
         Hospital hospital = new Hospital();
         hospital.addEmployee(e1);

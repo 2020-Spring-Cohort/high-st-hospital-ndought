@@ -16,10 +16,10 @@ public class Hospital {
         patientMap.put(pat.getName(), pat);
     }
 
-    public void payAllEmployees(){
-        for(Employee emp: employeeMap.values()){
-            emp.setPaid(true);
-        }
-    }
+//    public void payAllEmployees(){
+//        for(Employee emp: employeeMap.values()){
+//            emp.setPaid(true);
+//        }
+//    }
 
 }

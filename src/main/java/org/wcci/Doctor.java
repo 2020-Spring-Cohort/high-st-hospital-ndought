@@ -4,22 +4,20 @@ public class Doctor extends Employee {
 
     private String specialty;
 
-    public String getSpecialty() {
-        return "Heart";
-    }
-    public Doctor(String name, int empId, int salary, String specialty) {
-        super(name, empId, salary);
+    public Doctor(String name, int empId, int salary, boolean paid, String specialty) {
+        super(name, empId, salary, paid);
         this.specialty = specialty;
     }
-    public void drawBlood(PatientOne testPatient) {
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public void drawBlood(Patient testPatient) {
         testPatient.haveBloodDrawn(2);
+        testPatient.getHealthLevel();
     }
-    @Override
-    public String toString() {
-        return "Doctor{" +
-                "specialty='" + specialty + '\'' +
-                '}';
-    }
+
+
 }
 
 

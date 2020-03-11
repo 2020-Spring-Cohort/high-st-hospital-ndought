@@ -8,19 +8,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class DoctorTest {
 
     Doctor underTest;
-    PatientOne testPatient;
+    Patient testPatient;
 
 
     @BeforeEach
     public void setup() {
-        underTest = new Doctor("Ralph", 5, 90000, "Heart");
-        testPatient = new PatientOne("billy", 20, "lung cancer");
+        underTest = new Doctor("Ralph", 5, 90000, true,"Heart");
+        testPatient = new Patient("billy", 20, 10);
     }
 
     @Test
     public void doctorsCanDrawBlood() {
         underTest.drawBlood(testPatient);
         assertEquals(18, testPatient.getBloodLevel());
+        assertEquals(8, testPatient.getHealthLevel());
     }
     @Test
     public void doctorShouldHaveASalaryOf90k() {
