@@ -2,29 +2,21 @@ package org.wcci;
 
 public class Receptionist extends Employee {
 
-    private boolean isOnPhone;
 
-    public boolean isOnPhone() {
-        return isOnPhone;
-    }
+    boolean isOnPhone;
 
-    public void setOnPhone(boolean isOnPhone) {
+    public Receptionist(String name, int empId, int salary, boolean isPaid, boolean isOnPhone) {
+        super(name, empId, salary, isPaid);
         this.isOnPhone = isOnPhone;
     }
 
-    public Receptionist(String name, int empId, int salary, boolean isOnPhone) {
-        super(name, empId, salary);
-        this.isOnPhone = isOnPhone;
-        this.isOnPhone = true;
-    }
+//    DO I NEED GETTERS FOR BOOLEANS? DO I NEED GETTERS FOR EVERYTHING OR JUST THE CLASSES SPECIAL VARIABLE???
 
-    @Override
-    public String toString() {
-        return "Receptionist{" +
-                "isOnPhone=" + isOnPhone +
-                '}';
-    }
+
+
 }
+//    DOES MY OVERRIDE INCLUDE EVERYTHING OR JUST THE CLASSES SPECIAL VARIABLE???
+
 
 
 

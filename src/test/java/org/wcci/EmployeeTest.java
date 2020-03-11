@@ -1,18 +1,22 @@
 package org.wcci;
 
-import org.assertj.core.api.Assert;
-import org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class EmployeeTest {
+public class EmployeeTest {
 
     Employee underTest;
 
     @BeforeEach
     public void setUp() {
-        underTest = new Employee("zorro", 1, 20000);
+        underTest = new Employee("zorro", 1, 20000, true);
+    }
+
+    @Test
+    public void employeeShouldHaveAName() {
+        underTest.getName();
+        assertEquals("zorro", underTest.getName());
     }
 
 

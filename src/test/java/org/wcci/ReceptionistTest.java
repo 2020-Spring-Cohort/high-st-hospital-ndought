@@ -1,13 +1,17 @@
 package org.wcci;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReceptionistTest extends Employee {
+class ReceptionistTest {
 
-    public ReceptionistTest(String name, int empId, int salary) {
-        super(name, empId, salary);
+    Receptionist underTest;
+
+    @BeforeEach
+    public void setUp() {
+        underTest = new Receptionist("laura", 12, 35000, true, true);
     }
 
     @Test

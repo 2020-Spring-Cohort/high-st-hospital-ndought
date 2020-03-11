@@ -1,12 +1,19 @@
 package org.wcci;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PatientTest extends Patient {
+class PatientTest {
 
+    Patient underTest;
+    Doctor testDoctor;
+    Nurse testNurse;
 
-    public PatientTest(String name, int bloodLevel) {
-        super(name, bloodLevel);
+    @BeforeEach
+    public void setUp() {
+        underTest = new Patient("ken", 17, 4);
+        testDoctor = new Doctor("waldo", 23, 400000, false, "othopedic");
+        testNurse = new Nurse("beth", 10, 75000, true, 1);
     }
 
     @Test

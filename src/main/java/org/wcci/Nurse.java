@@ -2,17 +2,19 @@ package org.wcci;
 
 public class Nurse extends Employee {
 
-    private int patientLoad;
+    public int patientLoad;
 
-    public int getPatientLoad() {
-        return 2;
-    }
-    public Nurse(String name, int empId, int salary, int patientLoad) {
-        super(name, empId, salary);
+    public Nurse(String name, int empId, int salary, boolean isPaid, int patientLoad) {
+        super(name, empId, salary, isPaid);
         this.patientLoad = patientLoad;
     }
-    public void drawBlood(PatientTwo testPatient2)   {
-        testPatient2.haveBloodDrawn(5);
+
+    public int getPatientLoad() {
+        return patientLoad;
+    }
+
+    public void drawBlood(Patient testPatient)   {
+        testPatient.haveBloodDrawn(5);
     }
 
     @Override
@@ -21,7 +23,6 @@ public class Nurse extends Employee {
                 "patientLoad=" + patientLoad +
                 '}';
     }
-
 }
 
 
