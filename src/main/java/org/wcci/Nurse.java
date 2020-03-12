@@ -8,9 +8,11 @@ public class Nurse extends Employee {
         super(name, empId, salary, isPaid);
         this.patientLoad = patientLoad;
     }
-
     public int getPatientLoad() {
         return patientLoad;
+    }
+    public void provideCare(Patient testPatient) {
+        testPatient.receiveCare(2);
     }
 
     public void drawBlood(Patient testPatient)   {
@@ -19,9 +21,10 @@ public class Nurse extends Employee {
 
     @Override
     public String toString() {
-        return "Nurse{" +
+        return super.toString() + "Nurse{" +
                 "patientLoad=" + patientLoad +
                 '}';
+
     }
 }
 

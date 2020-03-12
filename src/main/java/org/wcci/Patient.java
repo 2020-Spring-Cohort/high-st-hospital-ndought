@@ -28,6 +28,10 @@ public class Patient {
         bloodLevel -= amount;
     }
 
+    public void receiveCare(int amount) {
+        healthLevel += amount;
+    }
+
     @Override
     public String toString() {
         return "Patient{" +

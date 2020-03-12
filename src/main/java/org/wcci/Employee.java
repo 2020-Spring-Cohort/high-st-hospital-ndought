@@ -13,16 +13,13 @@ public class Employee {
         this.salary = salary;
         this.isPaid = isPaid;
     }
-
     public String getName() {
         return name;
     }
 
-
     public int getEmpId() {
         return empId;
     }
-
 
     public int getSalary() {
         return salary;
