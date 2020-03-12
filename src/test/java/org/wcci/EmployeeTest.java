@@ -18,6 +18,11 @@ public class EmployeeTest {
         underTest.getName();
         assertEquals("zorro", underTest.getName());
     }
+    @Test
+    public void employeeShouldHaveAnEmployeeId() {
+        underTest.getEmpId();
+        assertEquals(1, underTest.getEmpId());
+    }
 
 
 
