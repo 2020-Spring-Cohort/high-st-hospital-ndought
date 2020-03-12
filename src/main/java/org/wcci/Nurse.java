@@ -13,15 +13,20 @@ public class Nurse extends Employee {
         return patientLoad;
     }
 
+    public void provideCare(Patient testPatient) {
+        testPatient.receiveCare(2);
+    }
+
     public void drawBlood(Patient testPatient)   {
         testPatient.haveBloodDrawn(5);
     }
 
     @Override
     public String toString() {
-        return "Nurse{" +
+        return super.toString() + "Nurse{" +
                 "patientLoad=" + patientLoad +
                 '}';
+
     }
 }
 

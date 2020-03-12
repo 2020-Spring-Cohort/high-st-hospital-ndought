@@ -14,27 +14,24 @@ class NurseTest {
     @BeforeEach
     public void setUp() {
         underTest = new Nurse("linda", 3, 50000, true, 1);
-        testPatient = new Patient("billy", 20, 10);
-
+        testPatient = new Patient("billy", 20, 6);
     }
 
     @Test
     public void nursesShouldHaveAPatientLoad() {
         underTest.getPatientLoad();
-        assertEquals(2, underTest.getPatientLoad());
+        assertEquals(1, underTest.getPatientLoad());
     }
+
     @Test
-    public void nursesShouldBePaid50k() {
-        underTest.getSalary();
-        assertEquals(50000, underTest.getSalary());
-    }
-    @Test
-    public void nursesCanAlsoDrawBlood() {
+    public void nursesCanDrawBlood() {
         underTest.drawBlood(testPatient);
         assertEquals(15, testPatient.getBloodLevel());
-
-
-
+    }
+    @Test
+    public void nursesCanProvideCare() {
+        underTest.provideCare(testPatient);
+        assertEquals(8, testPatient.getHealthLevel());
     }
 
 
