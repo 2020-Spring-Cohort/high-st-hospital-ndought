@@ -9,6 +9,17 @@ public class Receptionist extends Employee {
         super(name, empId, salary, isPaid);
         this.isOnPhone = isOnPhone;
     }
+
+    public boolean isOnPhone() {
+        return isOnPhone;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Receptionist{" +
+                "isOnPhone=" + isOnPhone +
+                '}';
+    }
 }
 
 

@@ -15,10 +15,10 @@ class ReceptionistTest {
     }
 
     @Test
-    void isOnPhone() {
+    public void shouldBeAbleToSeeIfReceptionistIsOnPhoneOrNot() {
+        underTest.isOnPhone();
+        assertTrue(true);
     }
 
-    @Test
-    void setOnPhone() {
-    }
+
 }
