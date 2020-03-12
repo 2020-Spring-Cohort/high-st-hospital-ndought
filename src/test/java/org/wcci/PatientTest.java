@@ -23,13 +23,14 @@ class PatientTest {
         underTest.getName();
         assertEquals("ken", underTest.getName());
     }
-
     @Test
-    public int getBloodLevel() {
-        return 20;
+    public void patientShouldHaveABloodLevel() {
+        underTest.getBloodLevel();
+        assertEquals(17, underTest.getBloodLevel());
     }
-
     @Test
-    void haveBloodDrawn() {
+    public void patientShouldHaveAHealthLevel() {
+        underTest.getHealthLevel();
+        assertEquals(4, underTest.getHealthLevel());
     }
 }
