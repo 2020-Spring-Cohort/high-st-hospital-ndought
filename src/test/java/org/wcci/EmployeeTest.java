@@ -23,6 +23,12 @@ public class EmployeeTest {
         underTest.getEmpId();
         assertEquals(1, underTest.getEmpId());
     }
+    @Test
+    public void employeeShouldHaveASalary() {
+        underTest.getSalary();
+        assertEquals(20000, underTest.getSalary());
+    }
+    
 
 
 
