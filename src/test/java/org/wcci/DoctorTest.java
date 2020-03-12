@@ -10,13 +10,11 @@ class DoctorTest {
     Doctor underTest;
     Patient testPatient;
 
-
     @BeforeEach
     public void setup() {
         underTest = new Doctor("Ralph", 5, 90000, true,"Heart");
         testPatient = new Patient("billy", 20, 4);
     }
-
     @Test
     public void doctorsShouldHaveASpecialty() {
         underTest.getSpecialty();

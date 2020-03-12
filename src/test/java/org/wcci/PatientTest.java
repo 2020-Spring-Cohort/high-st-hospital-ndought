@@ -17,7 +17,6 @@ class PatientTest {
         testDoctor = new Doctor("waldo", 23, 400000, false, "othopedic");
         testNurse = new Nurse("beth", 10, 75000, true, 1);
     }
-
     @Test
     public void patientShouldHaveAName() {
         underTest.getName();

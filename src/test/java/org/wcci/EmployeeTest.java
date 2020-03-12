@@ -11,10 +11,8 @@ public class EmployeeTest {
     @BeforeEach
     public void setUp() {
         underTest = new Employee("zorro", 1, 20000, true) {
-
         };
     }
-
     @Test
     public void employeeShouldHaveAName() {
         underTest.getName();

@@ -8,11 +8,9 @@ public class Nurse extends Employee {
         super(name, empId, salary, isPaid);
         this.patientLoad = patientLoad;
     }
-
     public int getPatientLoad() {
         return patientLoad;
     }
-
     public void provideCare(Patient testPatient) {
         testPatient.receiveCare(2);
     }
