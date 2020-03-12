@@ -33,4 +33,14 @@ class PatientTest {
         underTest.getHealthLevel();
         assertEquals(4, underTest.getHealthLevel());
     }
+    @Test
+    public void patientBloodLevelShouldDecreaseWhenTheyHaveBloodDrawn() {
+        testNurse.drawBlood(underTest);
+        assertEquals(12, underTest.getBloodLevel());
+    }
+    @Test
+    public void patientHealthLevelShouldIncreaseWhenTheyReceiveCare() {
+        testDoctor.provideCare(underTest);
+        assertEquals(9, underTest.getHealthLevel());
+    }
 }
