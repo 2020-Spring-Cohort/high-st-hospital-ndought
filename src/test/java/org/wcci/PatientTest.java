@@ -3,6 +3,8 @@ package org.wcci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class PatientTest {
 
     Patient underTest;
@@ -17,7 +19,9 @@ class PatientTest {
     }
 
     @Test
-    void testGetName() {
+    public void patientShouldHaveAName() {
+        underTest.getName();
+        assertEquals("ken", underTest.getName());
     }
 
     @Test
