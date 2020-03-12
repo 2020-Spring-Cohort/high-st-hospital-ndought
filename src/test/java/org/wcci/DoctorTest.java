@@ -14,25 +14,31 @@ class DoctorTest {
     @BeforeEach
     public void setup() {
         underTest = new Doctor("Ralph", 5, 90000, true,"Heart");
-        testPatient = new Patient("billy", 20, 10);
+        testPatient = new Patient("billy", 20, 4);
     }
 
-    @Test
-    public void doctorsCanDrawBlood() {
-        underTest.drawBlood(testPatient);
-        assertEquals(18, testPatient.getBloodLevel());
-        assertEquals(8, testPatient.getHealthLevel());
-    }
-    @Test
-    public void doctorShouldHaveASalaryOf90k() {
-        underTest.getSalary();
-        assertEquals(90000, underTest.getSalary());
-    }
     @Test
     public void doctorsShouldHaveASpecialty() {
         underTest.getSpecialty();
         assertEquals("Heart", underTest.getSpecialty());
     }
+    @Test
+    public void doctorsCanDrawBlood() {
+        underTest.drawBlood(testPatient);
+        assertEquals(18, testPatient.getBloodLevel());
+    }
+    @Test
+    public void doctorsCanProvideCareToPatient() {
+        underTest.provideCare(testPatient);
+    }
+    @Test
+    public void whenDoctorProvidesCarePatientHealthLevelShouldIncrease() {
+        underTest.provideCare(testPatient);
+        assertEquals(9, testPatient.getHealthLevel());
+    }
+
+
+
 }
 
 

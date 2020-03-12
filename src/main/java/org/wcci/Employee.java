@@ -7,12 +7,16 @@ public class Employee {
     private int salary;
     boolean isPaid;
 
+
+
     public Employee(String name, int empId, int salary, boolean isPaid) {
         this.name = name;
         this.empId = empId;
         this.salary = salary;
         this.isPaid = isPaid;
     }
+
+
 
     public String getName() {
         return name;

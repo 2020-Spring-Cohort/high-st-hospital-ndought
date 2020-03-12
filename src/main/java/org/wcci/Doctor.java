@@ -14,7 +14,9 @@ public class Doctor extends Employee {
 
     public void drawBlood(Patient testPatient) {
         testPatient.haveBloodDrawn(2);
-        testPatient.getHealthLevel();
+    }
+    public void provideCare(Patient testPatient) {
+        testPatient.receiveCare(5);
     }
 
     @Override
