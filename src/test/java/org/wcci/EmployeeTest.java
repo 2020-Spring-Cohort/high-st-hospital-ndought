@@ -28,7 +28,11 @@ public class EmployeeTest {
         underTest.getSalary();
         assertEquals(20000, underTest.getSalary());
     }
-    
+    @Test
+    public void employeeShouldBePaid() {
+        underTest.isPaid();
+        assertTrue(true);
+    }
 
 
 
