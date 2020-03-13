@@ -4,22 +4,28 @@ import java.util.HashMap;
 
 public class Hospital {
 
-    private HashMap<String, Employee> employeeMap = new HashMap<>();
+    private HashMap<Integer, Employee> employeeList = new HashMap<>();
 
-    public void addEmployee(Employee emp){
-        employeeMap.put(emp.getName(), emp);
+    public HashMap<Integer, Employee> getEmployeeList() {
+        return employeeList;
+    }
+    public void addEmployeeToList(Employee testEmployee) {
+        employeeList.put(testEmployee.getEmpId(), testEmployee);
+    }
+    public int size() {
+        return employeeList.size();
     }
 
-    private HashMap<String, Patient> patientMap = new HashMap<>();
-
-    public void addPatient(Patient pat) {
-        patientMap.put(pat.getName(), pat);
+    @Override
+    public String toString() {
+        return "Hospital{" +
+                "employeeList=" + employeeList +
+                '}';
     }
 
-//    public void payAllEmployees(){
-//        for(Employee emp: employeeMap.values()){
-//            emp.setPaid(true);
-//        }
-//    }
-
+    public void payEmployees() {
+        for (Employee employeeToBePaid : employeeList.values()) {
+            employeeToBePaid.isPaid();
+        }
+    }
 }
