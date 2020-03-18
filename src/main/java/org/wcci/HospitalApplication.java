@@ -19,7 +19,17 @@ public class HospitalApplication {
         Receptionist e3 = new Receptionist("Amanda", 3, 45000, false);
         Janitor e4 = new Janitor("Travis Pettrey", 4, 40000, false);
 
-        highStHospital.
+        highStHospital.addEmployee(e1);
+        highStHospital.addEmployee(e2);
+        highStHospital.addEmployee(e3);
+        highStHospital.addEmployee(e4);
+
+//        Create Patients
+        Patient p1 = new Patient("Jerry", 18, 7);
+        Patient p2 = new Patient("Linda", 16, 4);
+
+        highStHospital.addPatient(p1);
+        highStHospital.addPatient(p2);
 
 
 

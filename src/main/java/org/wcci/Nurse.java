@@ -1,18 +1,27 @@
 package org.wcci;
 
+import java.util.ArrayList;
+
 public class Nurse extends Employee {
 
-    public int patientLoad;
+
 
     public Nurse(String name, int empId, int salary, int patientLoad) {
         super(name, empId, salary);
-        this.patientLoad = patientLoad;
+
     }
+//    Collection of Patients
+    private ArrayList<Object> patientLoad = new ArrayList<>();
 
-
-    public int getPatientLoad() {
+    public ArrayList<Object> getPatientLoad() {
         return patientLoad;
     }
+    public int getPatientLoadCount() {
+      return patientLoad.size();
+  }
+  public void assignPatient(Object patient) {
+        patientLoad.add(patient);
+  }
     public void provideCare(Patient testPatient) {
         testPatient.receiveCare(2);
     }
@@ -21,9 +30,11 @@ public class Nurse extends Employee {
         testPatient.haveBloodDrawn(5);
     }
 
-    @Override
-    public void receivePay() {
 
+
+    @Override
+    public String receivePay() {
+        return "50,000";
     }
 
     @Override

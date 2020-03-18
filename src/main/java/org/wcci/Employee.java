@@ -25,7 +25,7 @@ public abstract class Employee {
         return salary;
     }
 
-    public abstract void receivePay();
+    public abstract String receivePay();
 
     @Override
     public String toString() {
