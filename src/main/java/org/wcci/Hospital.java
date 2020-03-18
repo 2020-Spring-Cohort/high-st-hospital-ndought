@@ -1,20 +1,32 @@
 package org.wcci;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Hospital {
 
     private HashMap<Integer, Employee> employeeList = new HashMap<>();
+    private HashMap<String, Patient> patientList = new HashMap<>();
 
-    public HashMap<Integer, Employee> getEmployeeList() {
-        return employeeList;
+    public void addEmployee(Employee newEmployee) {
+        employeeList.put(newEmployee.getEmpId(), newEmployee);
     }
-    public void addEmployeeToList(Employee testEmployee) {
-        employeeList.put(testEmployee.getEmpId(), testEmployee);
+    public void addPatient(Patient newPatient) {
+        patientList.put(newPatient.getName(), newPatient);
     }
-    public int size() {
-        return employeeList.size();
+    public Employee pageEmployee(Integer empId) {
+        return employeeList.get(empId);
     }
+    public Patient pagePatient(String patientName) {
+        return patientList.get(patientName);
+    }
+    public Collection<Employee> getEmployeeList() {
+        return employeeList.values();
+    }
+    public Collection<Patient> getPatientList() {
+        return patientList.values();
+    }
+
 
     @Override
     public String toString() {
@@ -25,7 +37,7 @@ public class Hospital {
 
     public void payEmployees() {
         for (Employee employeeToBePaid : employeeList.values()) {
-            employeeToBePaid.isPaid();
+            employeeToBePaid.receivePay();
         }
     }
 }

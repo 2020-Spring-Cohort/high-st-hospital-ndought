@@ -4,8 +4,8 @@ public class Doctor extends Employee {
 
     private String specialty;
 
-    public Doctor(String name, int empId, int salary, boolean paid, String specialty) {
-        super(name, empId, salary, paid);
+    public Doctor(String name, int empId, int salary, String specialty) {
+        super(name, empId, salary);
         this.specialty = specialty;
     }
     public String getSpecialty() {
@@ -20,10 +20,14 @@ public class Doctor extends Employee {
     }
 
     @Override
+    public void receivePay() {
+
+    }
+
+    @Override
     public String toString() {
-        return super.toString() + "Doctor{" +
-                "specialty='" + specialty + '\'' +
-                '}';
+        return  "Profession: (Doctor) Name= " + getName() + " || " + " Employee ID#= " + getEmpId() +
+                 " || " + " Specialty= " + getSpecialty() + " || " + " Salary= " + getSalary();
     }
 }
 

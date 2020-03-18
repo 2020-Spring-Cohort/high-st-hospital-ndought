@@ -4,18 +4,25 @@ public class Receptionist extends Employee {
 
     boolean isOnPhone;
 
-    public Receptionist(String name, int empId, int salary, boolean isPaid, boolean isOnPhone) {
-        super(name, empId, salary, isPaid);
+    public Receptionist(String name, int empId, int salary, boolean isOnPhone) {
+        super(name, empId, salary);
         this.isOnPhone = isOnPhone;
     }
+
+
     public boolean isOnPhone() {
         return isOnPhone;
     }
+
+    @Override
+    public void receivePay() {
+
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "Receptionist{" +
-                "isOnPhone=" + isOnPhone +
-                '}';
+        return  "Profession: (Receptionist) Name= " + getName() + " || " + " Employee ID#= " + getEmpId() +
+                " || " + " Phone Status= " + isOnPhone() + " || " + " Salary= " + getSalary();
     }
 }
 

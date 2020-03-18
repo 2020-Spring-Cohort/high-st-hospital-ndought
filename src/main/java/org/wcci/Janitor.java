@@ -4,18 +4,25 @@ public class Janitor extends Employee {
 
     boolean isSweeping;
 
-    public Janitor(String name, int empId, int salary, boolean paid, boolean isSweeping) {
-        super(name, empId, salary, paid);
+    public Janitor(String name, int empId, int salary, boolean isSweeping) {
+        super(name, empId, salary);
         this.isSweeping = isSweeping;
     }
+
+
     public boolean isSweeping() {
         return isSweeping;
     }
+
+    @Override
+    public void receivePay() {
+
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "Janitor{" +
-                "isSweeping=" + isSweeping +
-                '}';
+        return  "Profession: (Janitor) Name= " + getName() + " || " + " Employee ID#= " + getEmpId() +
+                " || " + " Currently Sweeping= " + isSweeping() + " || " + " Salary= " + getSalary();
     }
 }
 

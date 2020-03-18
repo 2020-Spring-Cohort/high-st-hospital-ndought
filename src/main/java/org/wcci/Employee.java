@@ -1,18 +1,18 @@
 package org.wcci;
 
-public class Employee {
+public abstract class Employee {
 
     private String name;
     private int empId;
     private int salary;
-    boolean isPaid;
 
-    public Employee(String name, int empId, int salary, boolean isPaid) {
+
+    public Employee(String name, int empId, int salary) {
         this.name = name;
         this.empId = empId;
         this.salary = salary;
-        this.isPaid = isPaid;
     }
+
     public String getName() {
         return name;
     }
@@ -25,9 +25,7 @@ public class Employee {
         return salary;
     }
 
-    public boolean isPaid() {
-        return isPaid;
-    }
+    public abstract void receivePay();
 
     @Override
     public String toString() {
@@ -35,7 +33,6 @@ public class Employee {
                 "name='" + name + '\'' +
                 ", empId=" + empId +
                 ", salary=" + salary +
-                ", isPaid=" + isPaid +
                 '}';
     }
 }

@@ -4,10 +4,12 @@ public class Nurse extends Employee {
 
     public int patientLoad;
 
-    public Nurse(String name, int empId, int salary, boolean isPaid, int patientLoad) {
-        super(name, empId, salary, isPaid);
+    public Nurse(String name, int empId, int salary, int patientLoad) {
+        super(name, empId, salary);
         this.patientLoad = patientLoad;
     }
+
+
     public int getPatientLoad() {
         return patientLoad;
     }
@@ -20,11 +22,14 @@ public class Nurse extends Employee {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + "Nurse{" +
-                "patientLoad=" + patientLoad +
-                '}';
+    public void receivePay() {
 
+    }
+
+    @Override
+    public String toString() {
+        return  "Profession: (Nurse) Name= " + getName() + " || " + " Employee ID#= " + getEmpId() +
+                " || " + " Patient Load= " + getPatientLoad() + " || " + " Salary= " + getSalary();
     }
 }
 
