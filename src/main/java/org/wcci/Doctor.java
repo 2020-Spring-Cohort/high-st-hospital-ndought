@@ -20,8 +20,9 @@ public class Doctor extends Employee {
     }
 
     @Override
-    public void receivePay() {
+    public String receivePay() {
 
+        return "90,000";
     }
 
     @Override

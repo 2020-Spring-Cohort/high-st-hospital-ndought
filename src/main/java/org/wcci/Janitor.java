@@ -15,8 +15,9 @@ public class Janitor extends Employee {
     }
 
     @Override
-    public void receivePay() {
+    public String receivePay() {
 
+        return "40,000";
     }
 
     @Override

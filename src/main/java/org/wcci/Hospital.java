@@ -11,15 +11,19 @@ public class Hospital {
     public void addEmployee(Employee newEmployee) {
         employeeList.put(newEmployee.getEmpId(), newEmployee);
     }
+
     public void addPatient(Patient newPatient) {
         patientList.put(newPatient.getName(), newPatient);
     }
+
     public Employee pageEmployee(Integer empId) {
         return employeeList.get(empId);
     }
+
     public Patient pagePatient(String patientName) {
         return patientList.get(patientName);
     }
+
     public Collection<Employee> getEmployeeList() {
         return employeeList.values();
     }

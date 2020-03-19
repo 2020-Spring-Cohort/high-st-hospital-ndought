@@ -27,14 +27,14 @@ public abstract class Employee {
 
     public abstract String receivePay();
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", empId=" + empId +
-                ", salary=" + salary +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "name='" + name + '\'' +
+//                ", empId=" + empId +
+//                ", salary=" + salary +
+//                '}';
+//    }
 }
 
 
