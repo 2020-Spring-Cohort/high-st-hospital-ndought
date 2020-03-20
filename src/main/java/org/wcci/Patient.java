@@ -24,12 +24,12 @@ public class Patient {
         return healthLevel;
     }
 
-    public void haveBloodDrawn(int amount) {
-        bloodLevel -= amount;
+    public int haveBloodDrawn(int amount) {
+       return bloodLevel -16;
     }
 
-    public void receiveCare(int amount) {
-        healthLevel += amount;
+    public int receiveCare(int amount) {
+        return healthLevel +5;
     }
 
     @Override

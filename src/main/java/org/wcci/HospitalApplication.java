@@ -26,7 +26,6 @@ public class HospitalApplication {
         highStHospital.addEmployee(e4);
 
 
-
 //        Create Patients
         Patient p1 = new Patient("Jerry", 18, 3);
         Patient p2 = new Patient("Linda", 16, 4);
@@ -34,8 +33,8 @@ public class HospitalApplication {
         highStHospital.addPatient(p1);
         highStHospital.addPatient(p2);
 
-        p1.receiveCare(4);
-        p2.receiveCare(6);
+//        p1.receiveCare(4);
+//        p2.receiveCare(6);
 
 //        e2.assignPatient(p1);
 //        e2.assignPatient(p2);
@@ -46,7 +45,7 @@ public class HospitalApplication {
         boolean mainMenu = true;
         while (mainMenu) {
 
-            loopCount +=1;
+            loopCount += 1;
             impactOfLoopCount(highStHospital, loopCount);
 
             System.out.println("\nHello and welcome to High St Hospital! We run a class 4 pandemic zombie trauma \n" +
@@ -66,7 +65,13 @@ public class HospitalApplication {
                     System.out.println(getEmpId(e2));
                     System.out.println(getEmpId(e3));
                     System.out.println(getEmpId(e4));
-                    System.out.println("\n");
+                    break;
+                case "4":
+                    System.out.println("\nHospital Payroll");
+                    for (Employee employee : highStHospital.getEmployeeList()) {
+                        System.out.println("Employee " + employee.getEmpId() + " (" + employee.getName() + "):\t"
+                                + employee.getSalary() + " annually.");
+                    }
                     break;
 
                 case "2":
@@ -84,106 +89,55 @@ public class HospitalApplication {
                         System.out.println("\n**Administer Patient care**");
                         System.out.println("\n1. Give basic care");
                         System.out.println("\n2. Draw blood for COVID-19 testing and quarantine\n");
-
-
                         System.out.println("3. Return to Main Menu");
 
                         String taskMenuSelection = input.nextLine();
 
                         switch (taskMenuSelection) {
                             case "1":
-                                System.out.println("\nWhich Patient would you like to care for?");
+                                System.out.println("\nIf you would like to administer basic care to Jerry please enter his name below");
                                 System.out.println(highStHospital.pagePatient("Jerry"));
-                                System.out.println(highStHospital.pagePatient("Linda"));
                                 System.out.println("\nEnter Patient Name:");
                                 String patientName = input.nextLine();
-                                System.out.println(p1.getHealthLevel());
+                                System.out.println("Jerry's new Health Level: " + p1.receiveCare(+5));
+                                break;
 
                             case "2":
-                                System.out.println("\nWhich Patient would you like to test for Corona Virus?");
-                                System.out.println(highStHospital.pagePatient("Jerry"));
+                                System.out.println("\nIf you would like to Draw blood from Linda to test for COVID-19 please enter her name below");
                                 System.out.println(highStHospital.pagePatient("Linda"));
                                 System.out.println("\nEnter Patient Name:");
                                 patientName = input.nextLine();
-
-
-
+                                System.out.println("Linda has COVID-19 :( Linda is now dead. Linda's Health level: " + p2.haveBloodDrawn(-16));
+                                System.out.println("Byeeeeee Linda");
+                                break;
                         }
-//                        break;
-
-
                     }
-//                    break;
 
-
-
-
-
-                case "6":
-                    System.out.println("\nHospital Payroll");
-                    for (Employee employee : highStHospital.getEmployeeList()) {
-                        System.out.println("Employee " + employee.getEmpId() + " (" + employee.getName() + "):\t"
-                                + employee.getSalary() + " annually.");
-                    }
 
 
             }
-//            break;
+
+
+
 
         }
-
-
-
-
-
-
-
-
-
-
+//            break;
 
     }
-
     private static void impactOfLoopCount(Hospital highStHospital, int loopCount) {
     }
-
-
-//    private static Doctor hireDoctor(Hospital highStHospital) {
-//        Doctor e1 = new Doctor("Vino", 1, 90000, "Corona Virus" );
-//        highStHospital.addEmployeeToList(e1);
-//        return e1;
-//}
-//    private static Nurse hireNurse(Hospital highStHospital) {
-//        Nurse e2 = new Nurse("Miley", 2, 50000, 1);
-//        highStHospital.addEmployeeToList(e2);
-//        return e2;
-//    }
-//    private static Receptionist hireReceptionist(Hospital highStHospital) {
-//        Receptionist e3 = new Receptionist("Amanda", 3, 45000, false);
-//        highStHospital.addEmployeeToList(e3);
-//        return e3;
-//    }
-//    private static Janitor hireJanitor(Hospital highStHospital) {
-//        Janitor e4 = new Janitor("Travis Pettrey", 4, 40000, false);
-//        highStHospital.addEmployeeToList(e4);
-//        return e4;
-//    }
-
-
-
-
-
-
+}
     private static Object getEmpId(Employee testEmployee) {
         return testEmployee;
     }
     private static Hospital createHospital() {
         return new Hospital();
     }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
