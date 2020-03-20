@@ -15,10 +15,10 @@ class JanitorTest  {
     }
 
     @Test
-    void isSweeping() {
+    public void shouldBeAbleToSeeIfJanitorIsSweeping() {
+        underTest.isSweeping();
+        assertFalse(false);
     }
 
-    @Test
-    void setSweeping() {
-    }
+
 }

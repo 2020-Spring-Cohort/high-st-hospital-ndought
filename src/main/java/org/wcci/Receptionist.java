@@ -2,76 +2,31 @@ package org.wcci;
 
 public class Receptionist extends Employee {
 
-
     boolean isOnPhone;
 
-    public Receptionist(String name, int empId, int salary, boolean isPaid, boolean isOnPhone) {
-        super(name, empId, salary, isPaid);
+    public Receptionist(String name, int empId, int salary, boolean isOnPhone) {
+        super(name, empId, salary);
         this.isOnPhone = isOnPhone;
     }
 
-//    DO I NEED GETTERS FOR BOOLEANS? DO I NEED GETTERS FOR EVERYTHING OR JUST THE CLASSES SPECIAL VARIABLE???
 
+    public boolean isOnPhone() {
+        return isOnPhone;
+    }
 
+    @Override
+    public String receivePay() {
 
+        return "45,000";
+    }
+
+    @Override
+    public String toString() {
+        return  "Profession: (Receptionist) Name= " + getName() + " || " + " Employee ID#= " + getEmpId() +
+                " || " + " Phone Status= " + isOnPhone() + " || " + " Salary= " + getSalary();
+    }
 }
-//    DOES MY OVERRIDE INCLUDE EVERYTHING OR JUST THE CLASSES SPECIAL VARIABLE???
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//public class Receptionist extends Employee {
-//
-//    private boolean isUsingPhone;
-//
-//    public Receptionist(String name, int empId, int salary) {
-//        super(name, empId, salary);
-//        this.isUsingPhone = false;
-//    }
-//
-//    public boolean getPhoneStatus() {
-//        return isUsingPhone;
-//    }
-//
-//    @Override
-//    public boolean getPaid() {
-//        return paid;
-//    }
-//
-//    public boolean isOnPhone() {
-//        return isUsingPhone;
-//
-//
-//
-//
-//
-//    }
-//    public boolean paid() {
-//        return false;
-//    }
-//}
 
 
 

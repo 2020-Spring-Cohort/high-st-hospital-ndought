@@ -1,47 +1,143 @@
 package org.wcci;
 
+import java.io.*;
+import javax.swing.*;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class HospitalApplication {
-    private static Scanner input;
-    private static Object onPhone;
-
     public static void main(String[] args) {
 
-        Doctor e1 = new Doctor("Vino", 007, 90000, true, "Heart");
-        e1.getName();
-        Nurse e2 = new Nurse("Amanda", 002, 50000,  true, 1);
-        e2.getName();
-        Receptionist e3 = new Receptionist("Miley", 003, 45000, false, true);
-        e3.getName();
-        Janitor e4 = new Janitor("Noah", 004, 40000, false, false);
-        e4.getName();
-        Patient p1 = new Patient("Bob", 20, 10);
-        p1.getName();
-        Patient p2 = new Patient("Sally", 17, 10);
-        p2.getName();
+        Scanner input = new Scanner(System.in);
 
-        Hospital hospital = new Hospital();
-        hospital.addEmployee(e1);
-        hospital.addEmployee(e2);
-        hospital.addEmployee(e3);
-        hospital.addEmployee(e4);
-        hospital.addPatient(p1);
-        hospital.addPatient(p2);
+//        Create Hospital
+        Hospital highStHospital = new Hospital();
 
 
-        System.out.println("Hello and welcome to High St Hospital!!");
-        System.out.println("Here is a list of our Employees: ");
-        System.out.println(e1);
-        System.out.println(e2);
-        System.out.println(e3);
-        System.out.println(e4);
+//        Create Staff
+        Doctor e1 = new Doctor("Vino", 1, 90000, "Corona Virus");
+        Nurse e2 = new Nurse("Miley", 2, 50000, 2);
+        Receptionist e3 = new Receptionist("Amanda", 3, 45000, false);
+        Janitor e4 = new Janitor("Travis Pettrey", 4, 40000, false);
 
-        System.out.println("Here is a list of our Patients: ");
-        System.out.println(p1);
-        System.out.println(p2);
+        highStHospital.addEmployee(e1);
+        highStHospital.addEmployee(e2);
+        highStHospital.addEmployee(e3);
+        highStHospital.addEmployee(e4);
 
+
+//        Create Patients
+        Patient p1 = new Patient("Jerry", 18, 3);
+        Patient p2 = new Patient("Linda", 16, 4);
+
+        highStHospital.addPatient(p1);
+        highStHospital.addPatient(p2);
+
+//        p1.receiveCare(4);
+//        p2.receiveCare(6);
+
+//        e2.assignPatient(p1);
+//        e2.assignPatient(p2);
+
+//      Turn Counter
+        int loopCount = 0;
+
+        boolean mainMenu = true;
+        while (mainMenu) {
+
+            loopCount += 1;
+            impactOfLoopCount(highStHospital, loopCount);
+
+            System.out.println("\nHello and welcome to High St Hospital! We run a class 4 pandemic zombie trauma \n" +
+                    " center and have the best prepared staff in ohio. Main Menu:\n");
+            System.out.println("1. Staff Directory\n");
+            System.out.println("2. Patient Directory\n");
+            System.out.println("3. Administer Care\n");
+            System.out.println("4. Payroll\n");
+            System.out.println("5. Exit");
+
+            String mainMenuSelection = input.nextLine();
+
+            switch (mainMenuSelection) {
+                case "1":
+                    System.out.println("\n**Staff Directory**\n");
+                    System.out.println(getEmpId(e1));
+                    System.out.println(getEmpId(e2));
+                    System.out.println(getEmpId(e3));
+                    System.out.println(getEmpId(e4));
+                    break;
+                case "4":
+                    System.out.println("\nHospital Payroll");
+                    for (Employee employee : highStHospital.getEmployeeList()) {
+                        System.out.println("Employee " + employee.getEmpId() + " (" + employee.getName() + "):\t"
+                                + employee.getSalary() + " annually.");
+                    }
+                    break;
+
+                case "2":
+                    System.out.println("\n**Patient Status**");
+                    System.out.println("\nRooms Filled: \n" + highStHospital.pagePatient("Jerry"));
+                    System.out.println(highStHospital.pagePatient("Linda"));
+                    break;
+                case "3":
+                    boolean taskMenu = true;
+                    while (taskMenu) {
+
+                        loopCount += 1;
+                        impactOfLoopCount(highStHospital, loopCount);
+
+                        System.out.println("\n**Administer Patient care**");
+                        System.out.println("\n1. Give basic care");
+                        System.out.println("\n2. Draw blood for COVID-19 testing and quarantine\n");
+                        System.out.println("3. Return to Main Menu");
+
+                        String taskMenuSelection = input.nextLine();
+
+                        switch (taskMenuSelection) {
+                            case "1":
+                                System.out.println("\nIf you would like to administer basic care to Jerry please enter his name below");
+                                System.out.println(highStHospital.pagePatient("Jerry"));
+                                System.out.println("\nEnter Patient Name:");
+                                String patientName = input.nextLine();
+                                System.out.println("Jerry's new Health Level: " + p1.receiveCare(+5));
+                                break;
+
+                            case "2":
+                                System.out.println("\nIf you would like to Draw blood from Linda to test for COVID-19 please enter her name below");
+                                System.out.println(highStHospital.pagePatient("Linda"));
+                                System.out.println("\nEnter Patient Name:");
+                                patientName = input.nextLine();
+                                System.out.println("Linda has COVID-19 :( Linda is now dead. Linda's Health level: " + p2.haveBloodDrawn(-16));
+                                System.out.println("Byeeeeee Linda");
+                                break;
+                        }
+                    }
+
+
+
+            }
+
+
+
+
+        }
+//            break;
 
     }
-
+    private static void impactOfLoopCount(Hospital highStHospital, int loopCount) {
+    }
 }
+    private static Object getEmpId(Employee testEmployee) {
+        return testEmployee;
+    }
+    private static Hospital createHospital() {
+        return new Hospital();
+    }
+}
+
+
+
+
+
+
+
