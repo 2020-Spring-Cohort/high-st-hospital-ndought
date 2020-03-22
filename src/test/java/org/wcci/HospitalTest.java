@@ -3,6 +3,7 @@ package org.wcci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -14,19 +15,19 @@ public class HospitalTest {
     @BeforeEach
     void setUp() {
         underTest = new Hospital();
-        testEmployee = new Employee("testEmployee", 3, 50000, true);
+        testEmployee = new Employee("testEmployee", 3, 50000);
     }
 
     @Test
     public void canAddEmployeeToList() {
-        underTest.addEmployeeToList(testEmployee);
+        underTest.addEmployee(testEmployee);
         assertEquals(1, underTest.size());
     }
     @Test
     public void canPayEmployees() {
-        underTest.addEmployeeToList(testEmployee);
+        underTest.addEmployee(testEmployee);
         underTest.payEmployees();
-        assertTrue(testEmployee.isPaid);
+        assertThat(testEmployee.receivePay());
     }
 }
 

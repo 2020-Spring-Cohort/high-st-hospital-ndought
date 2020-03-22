@@ -10,7 +10,11 @@ public class EmployeeTest {
 
     @BeforeEach
     public void setUp() {
-        underTest = new Employee("zorro", 1, 20000, true) {
+        underTest = new Employee("zorro", 1, 20000) {
+            @Override
+            public String receivePay() {
+                return null;
+            }
         };
     }
     @Test
@@ -30,7 +34,7 @@ public class EmployeeTest {
     }
     @Test
     public void employeeShouldBePaid() {
-        underTest.isPaid();
+        underTest.receivePay();
         assertTrue(true);
     }
 

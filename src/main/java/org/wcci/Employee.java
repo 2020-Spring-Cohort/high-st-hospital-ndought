@@ -1,6 +1,6 @@
 package org.wcci;
 
-public abstract class Employee {
+public class Employee {
 
     private String name;
     private int empId;
@@ -25,16 +25,11 @@ public abstract class Employee {
         return salary;
     }
 
-    public abstract String receivePay();
+    public String receivePay() {
+        return null;
+    }
 
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "name='" + name + '\'' +
-//                ", empId=" + empId +
-//                ", salary=" + salary +
-//                '}';
-//    }
+
 }
 
 

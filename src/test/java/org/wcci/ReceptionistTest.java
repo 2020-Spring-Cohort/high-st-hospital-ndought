@@ -11,7 +11,7 @@ class ReceptionistTest {
 
     @BeforeEach
     public void setUp() {
-        underTest = new Receptionist("laura", 12, 35000, true, true);
+        underTest = new Receptionist("laura", 12, 35000, true);
     }
 
     @Test

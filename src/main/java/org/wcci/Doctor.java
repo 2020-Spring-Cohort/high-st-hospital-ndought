@@ -13,7 +13,7 @@ public class Doctor extends Employee {
     }
 
     public void drawBlood(Patient testPatient) {
-        testPatient.haveBloodDrawn(2);
+        testPatient.haveBloodDrawn( -2);
     }
     public void provideCare(Patient testPatient) {
         testPatient.receiveCare(5);

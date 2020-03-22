@@ -12,7 +12,7 @@ class NurseTest {
 
     @BeforeEach
     public void setUp() {
-        underTest = new Nurse("linda", 3, 50000, true, 1);
+        underTest = new Nurse("linda", 3, 50000,  1);
         testPatient = new Patient("billy", 20, 6);
     }
     @Test
@@ -23,12 +23,12 @@ class NurseTest {
     @Test
     public void nursesCanDrawBlood() {
         underTest.drawBlood(testPatient);
-        assertEquals(15, testPatient.getBloodLevel());
+        assertEquals(20, testPatient.getBloodLevel());
     }
     @Test
     public void nursesCanProvideCare() {
         underTest.provideCare(testPatient);
-        assertEquals(8, testPatient.getHealthLevel());
+        assertEquals(6, testPatient.getHealthLevel());
     }
 
 

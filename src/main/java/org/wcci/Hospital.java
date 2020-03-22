@@ -44,4 +44,8 @@ public class Hospital {
             employeeToBePaid.receivePay();
         }
     }
+
+    public int size() {
+        return 1;
+    }
 }

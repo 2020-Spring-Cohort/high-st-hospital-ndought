@@ -14,8 +14,8 @@ class PatientTest {
     @BeforeEach
     public void setUp() {
         underTest = new Patient("ken", 17, 4);
-        testDoctor = new Doctor("waldo", 23, 400000, false, "othopedic");
-        testNurse = new Nurse("beth", 10, 75000, true, 1);
+        testDoctor = new Doctor("waldo", 23, 400000,  "othopedic");
+        testNurse = new Nurse("beth", 10, 75000,  1);
     }
     @Test
     public void patientShouldHaveAName() {

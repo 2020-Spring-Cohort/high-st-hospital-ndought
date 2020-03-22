@@ -11,7 +11,7 @@ class JanitorTest  {
 
     @BeforeEach
     public void setUp() {
-        underTest = new Janitor("lenny", 24, 20000, true, false);
+        underTest = new Janitor("lenny", 24, 20000, true);
     }
 
     @Test
